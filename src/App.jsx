@@ -3,6 +3,7 @@ import InicioSesion from "./pages/InicioSesion";
 import Proveedores from "./pages/Proveedores";
 import AgregarProveedor from "./pages/AgregarProveedor";
 import ModificarProveedor from "./pages/ModificarProveedor";
+import Compras from "./pages/Compras";
 
 function App() {
   return (
@@ -20,6 +21,10 @@ function App() {
         <Route
           path="/modificarProveedor/:legajoEncargado/:idProveedor"
           Component={ModificarProveedor}
+        ></Route>
+        <Route
+          path="/compras/:legajoEncargado/:idProveedor"
+          Component={Compras}
         ></Route>
       </Routes>
     </BrowserRouter>
