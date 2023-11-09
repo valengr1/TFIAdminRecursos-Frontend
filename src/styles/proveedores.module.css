@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.principal{
+    min-height: 100vh;
+    background: url("../../images/backiee-79785-landscape.jpg") center / cover;
+    align-items: center;
+}
+
+body{
+  min-height: 100vh;
+    background: url("../../images/backiee-79785-landscape.jpg") center / cover;
+    align-items: center;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
+  height: 3em;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 0.8rem;
+  text-align: center;
+  box-shadow: 0 .4rem .8rem #0005;
+}
+
+.buttonSalir{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: black;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 0.8rem;
+}
+
+.buttonSalir:hover{
+  scale: 1.02;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.header_titulo{
+  font-size: 1.5em;
+}
+
+.header_encargadoCaja{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 .4rem .8rem #0005;
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter: blur(7px);
+  border-radius: 0.8rem;
+  width: 80vw;
+  text-align: center;
+  margin-left: 10vw;
+  margin-top: .8rem;
+}
+
+.busqueda{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 15px;
+}
+
+.botones{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  gap: 50%;
+}
+
+.form_label{
+  
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.form_input{
+  
+  height: 20px;
+  border-radius: 10px;
+  padding-left: 7px;
+  border: none;
+  box-shadow: 0 .4rem .8rem #0005;
+}
+
+.form_buttonBuscar{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: rgb(100,100,100);
+  border: none;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 0.8rem;
+}
+
+.form_buttonBuscar:hover{
+  scale: 1.02;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.form_buttonAgregar{
+  height: 24px;
+  width: 140px;
+  border-radius: 0.8rem;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 .4rem .8rem #0005;
+}
+
+.form_buttonAgregar:hover{
+  scale: 1.02;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.divTabla{
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+    overflow: overlay;
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem #0005;
+}
+
+.divTabla::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.divTabla::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.divTabla:hover::-webkit-scrollbar-thumb{ 
+  visibility: visible;
+}
+
+.table{
+    width: 100%;
+}
+
+.buttonEliminar{
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: red;
+  border: none;
+  background: transparent;
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 0.8rem;
+}
+
+i{
+  width: 100%;
+  scale: 1.4;
+}
+
+.buttonEliminar:hover{
+  scale: 1.06;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.buttonEditar{
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: blue;
+  border: none;
+  background: transparent;
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 0.8rem;
+}
+
+.buttonEditar:hover{
+  scale: 1.06;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.buttonAgregarTecnico{
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: green;
+  border: none;
+  background: transparent;
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 0.8rem;
+}
+
+.buttonAgregarTecnico:hover{
+  scale: 1.06;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.buttonCompras{
+  height: 40px;
+  width: 40px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  color: purple;
+  border: none;
+  background: transparent;
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 0.8rem;
+}
+
+.buttonCompras:hover{
+  scale: 1.06;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+td img {
+  width: 36px;
+  height: 36px;
+  margin-right: .5rem;
+  border-radius: 50%;
+
+  vertical-align: middle;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #d5d1defe;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #0000000b;
+}
+
+tbody tr {
+  --delay: .1s;
+  transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+tbody tr:hover {
+  background-color: #fff6 !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+  transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  transition: .2s ease-in-out .5s;
+}
+

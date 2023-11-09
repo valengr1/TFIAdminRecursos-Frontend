@@ -1,0 +1,157 @@
+.principal{
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30%;
+  box-shadow: 0 .4rem .8rem #0005;
+  height: 3em;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+.buttonSalir{
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  color: black;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 .4rem .8rem #0005;
+  border-radius: 0.8rem;
+}
+
+.buttonSalir:hover{
+  scale: 1.02;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.header_h2{
+  font-size: 1.5em;
+}
+
+.header_p{
+  font-size: 0.8em;
+}
+
+.main{
+  height: calc(100vh - 3em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form{
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(7px);
+  height: 350px;
+  width: 400px;
+  border-radius: 0.8rem;
+  text-align: center;
+  border: none;
+  box-shadow: 0 .4rem .8rem #0005;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.h2{
+  font-weight: 600;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+}
+
+.div1{
+  display: flex;
+  margin-top: 40px;
+}
+
+.div{
+  display: flex;
+  margin-top: 15px;
+}
+
+.h3_CUIT{
+  margin-left:80px;
+  font-style: italic;
+}
+
+.inputCUIT{
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 7px;
+  margin-left: 44px;
+}
+
+.h3_razonSocial{
+  margin-left:50px;
+  font-style: italic;
+}
+
+.inputRazonSocial{
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 7px;
+  margin-left: 10px;
+}
+
+.h3_direccion{
+  margin-left:60px;
+  font-style: italic;
+}
+
+.inputDireccion{
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 7px;
+  margin-left: 28px;
+}
+
+.h3_telefono{
+  margin-left:60px;
+  font-style: italic;
+}
+
+.inputTelefono{
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 7px;
+  margin-left: 33px;
+}
+
+
+.button{
+  margin-top: 50px;
+  height: 25px;
+  width: 100px;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+}
+
+.button:hover{
+  scale: 1.02;
+  padding-bottom: 1px;
+}
