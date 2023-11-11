@@ -6,13 +6,13 @@
 
 .principal{
     min-height: 100vh;
-    background: url("../../images/backiee-79785-landscape.jpg") center / cover;
+    background: url("../../images/backiee-59456-landscape.jpg") center / cover;
     align-items: center;
 }
 
 body{
   min-height: 100vh;
-    background: url("../../images/backiee-79785-landscape.jpg") center / cover;
+    background: url("../../images/backiee-59456-landscape.jpg") center / cover;
     align-items: center;
 }
 
@@ -56,6 +56,10 @@ body{
   gap: 10px;
 }
 
+h3{
+  
+}
+
 .form{
   height: 60px;
   display: flex;
@@ -91,6 +95,7 @@ body{
   
   font-size: 16px;
   font-weight: 600;
+  color: #000;
 }
 
 .form_input{
@@ -103,19 +108,11 @@ body{
 }
 
 .form_buttonBuscar{
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-  color: rgb(100,100,100);
+  
+  color: rgb(0, 0, 0);
   border: none;
-  background: rgba(255,255,255,0.6);
-  box-shadow: 0 .4rem .8rem #0005;
+  background: none;
   border-radius: 0.8rem;
-}
-
-.form_buttonBuscar:hover{
-  scale: 1.02;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
 }
 
 .form_buttonAgregar{

@@ -38,7 +38,7 @@ function InicioSesion() {
           toast.success("Bienvenido");
           setTimeout(() => {
             navigate("/proveedores/" + legajo);
-          }, 1000);
+          }, 1500);
         } else {
           toast.error("Legajo y/o contraseña incorrecto/a");
         }

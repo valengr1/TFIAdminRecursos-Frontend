@@ -7,6 +7,7 @@ import Swal from "sweetalert2";
 function Proveedores() {
   const navigate = useNavigate();
   const [proveedores, setProveedores] = useState([]);
+  const [razonSocialBuscar, setRazonSocialBuscar] = useState("");
   const [encargado, setEncargado] = useState({
     legajo: 0,
     nombre: "",
@@ -73,6 +74,27 @@ function Proveedores() {
     });
   };
 
+  const handleChangeBusqueda = (e) => {
+    setRazonSocialBuscar(e.target.value);
+  };
+
+  var results = [];
+
+  if (!razonSocialBuscar) {
+    results = proveedores;
+  } else if (razonSocialBuscar) {
+    results = proveedores.filter((elemento) => {
+      if (
+        elemento.razonSocial
+          .toString()
+          .toLowerCase()
+          .includes(razonSocialBuscar.toLowerCase())
+      ) {
+        return elemento;
+      }
+    });
+  }
+
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
@@ -82,19 +104,24 @@ function Proveedores() {
         <h2 className={styles.header_titulo}>Proveedores</h2>
         <div className={styles.header_encargadoCaja}>
           <i className="fa-regular fa-user"></i>
-          <h3>{encargado.nombre}</h3>
+          <h3>{encargado.nombre} </h3>
         </div>
       </header>
       <main className={styles.main}>
         <form className={styles.form}>
           <div className={styles.busqueda}>
+            <div className={styles.form_buttonBuscar}>
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </div>
             <label htmlFor="" className={styles.form_label}>
               Razón social:
             </label>
-            <input type="text" className={styles.form_input} />
-            <button className={styles.form_buttonBuscar}>
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </button>
+            <input
+              type="text"
+              className={styles.form_input}
+              name="razonSocialBuscar"
+              onChange={handleChangeBusqueda}
+            />
           </div>
           <div className={styles.botones}>
             <button
@@ -119,7 +146,7 @@ function Proveedores() {
               </tr>
             </thead>
             <tbody className={styles.tbody}>
-              {proveedores.map((proveedor) => (
+              {results.map((proveedor) => (
                 <tr key={proveedor.cuit}>
                   <td>{proveedor.id}</td>
                   <td>{proveedor.cuit}</td>

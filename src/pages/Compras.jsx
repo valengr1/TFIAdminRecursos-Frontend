@@ -86,6 +86,15 @@ function Compras() {
             <h2>Proveedor</h2>
             <h3>CUIT: {proveedor.cuit}</h3>
             <h3>Razón social: {proveedor.razonSocial}</h3>
+            <Link
+              to={
+                "/vencimientoDeGarantia/" + encargadoLegajo + "/" + idProveedor
+              }
+            >
+              <button className={styles.buttonVerDetalle}>
+                Vencimiento de garantias
+              </button>
+            </Link>
           </div>
         </div>
         <div className={styles.divTabla}>
@@ -128,7 +137,6 @@ function Compras() {
         <div className={styles.form}>
           <div className={styles.busqueda}>
             <h2>Detalle de compra</h2>
-            <h3>Id de la compra: </h3>
           </div>
         </div>
         <div className={styles.divTabla}>
