@@ -5,6 +5,7 @@ import AgregarProveedor from "./pages/AgregarProveedor";
 import ModificarProveedor from "./pages/ModificarProveedor";
 import Compras from "./pages/Compras";
 import VencimientoGarantia from "./pages/VencimientoGarantia";
+import Tecnicos from "./pages/Tecnicos";
 
 function App() {
   return (
@@ -30,6 +31,10 @@ function App() {
         <Route
           path="/vencimientoDeGarantia/:legajoEncargado/:idProveedor"
           Component={VencimientoGarantia}
+        ></Route>
+        <Route
+          path="/tecnicos/:legajoEncargado/:idProveedor"
+          Component={Tecnicos}
         ></Route>
       </Routes>
     </BrowserRouter>

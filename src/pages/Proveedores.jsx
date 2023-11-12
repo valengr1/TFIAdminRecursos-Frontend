@@ -46,6 +46,22 @@ function Proveedores() {
     navigate("/");
   };
 
+  function removeDuplicates(originalArray, prop) {
+    var newArray = [];
+    var lookupObject = {};
+
+    for (var i in originalArray) {
+      lookupObject[originalArray[i][prop]] = originalArray[i];
+    }
+
+    for (i in lookupObject) {
+      newArray.push(lookupObject[i]);
+    }
+    return newArray;
+  }
+
+  var uniqueArray = removeDuplicates(proveedores, "id");
+
   const agregarProveedor = (e) => {
     e.preventDefault();
     navigate("/agregarProveedor/" + encargado.legajo);
@@ -84,9 +100,9 @@ function Proveedores() {
   var results = [];
 
   if (!razonSocialBuscar) {
-    results = proveedores;
+    results = uniqueArray;
   } else if (razonSocialBuscar) {
-    results = proveedores.filter((elemento) => {
+    results = uniqueArray.filter((elemento) => {
       if (
         elemento.razonSocial
           .toString()
@@ -186,9 +202,13 @@ function Proveedores() {
                         <i className="fa-solid fa-cart-shopping"></i>
                       </button>
                     </Link>
-                    <button href="" className={styles.buttonAgregarTecnico}>
-                      <i className="fa-solid fa-user-plus"></i>
-                    </button>
+                    <Link
+                      to={"/tecnicos/" + encargadoLegajo + "/" + proveedor.id}
+                    >
+                      <button href="" className={styles.buttonAgregarTecnico}>
+                        <i className="fa-solid fa-user-plus"></i>
+                      </button>
+                    </Link>
                   </td>
                 </tr>
               ))}
