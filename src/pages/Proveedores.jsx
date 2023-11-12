@@ -21,9 +21,11 @@ function Proveedores() {
 
   useEffect(() => {
     const getProveedores = () => {
-      axios.get("http://localhost:8080/getProveedores").then((res) => {
-        setProveedores(res.data);
-      });
+      axios
+        .get("http://localhost:8080/getDetallesConProveedoresCalificados")
+        .then((res) => {
+          setProveedores(res.data);
+        });
     };
     const getEncargado = () => {
       axios
@@ -35,6 +37,7 @@ function Proveedores() {
     getProveedores();
     getEncargado();
     setIsUpdate(false);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isUpdate]);
 

@@ -25,6 +25,8 @@ function Compras() {
 
   const [compras, setCompras] = useState([]);
 
+  const [idCompra, setIdCompra] = useState(0);
+
   const location = useLocation();
   const encargadoLegajo = location.pathname.split("/")[2];
   const idProveedor = location.pathname.split("/")[3];
@@ -63,6 +65,9 @@ function Compras() {
       .then((res) => {
         setDetallesCompra(res.data);
       });
+    axios.get("http://localhost:8080/getIdCompra/" + id).then((res) => {
+      setIdCompra(res.data);
+    });
   };
 
   return (
@@ -136,7 +141,7 @@ function Compras() {
         </div>
         <div className={styles.form}>
           <div className={styles.busqueda}>
-            <h2>Detalle de compra</h2>
+            <h2>Detalle de compra: {idCompra}</h2>
           </div>
         </div>
         <div className={styles.divTabla}>
