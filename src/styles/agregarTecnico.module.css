@@ -21,7 +21,6 @@
   background: rgba(255,255,255,0.6);
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
-  
   color: #fff;
 }
 
@@ -76,9 +75,10 @@
   margin-top: 20px;
 }
 
-.div1{
-  display: flex;
-  margin-top: 40px;
+.h3_CUIT{
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-style: italic;
 }
 
 .div{
@@ -86,96 +86,139 @@
   margin-top: 15px;
 }
 
-.h3_CUIT{
-  margin-left:76px;
+.h3DNI{
+  margin-left:65px;
   font-style: italic;
+  font-size: 1.2em;
 }
 
-.inputCUIT{
+.inputDNI{
   border-radius: 10px;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 42px;
+  padding-left: 7px;
+  padding-right: 7px;
+  background: none;
+  width: 220px;
+}
+
+.inputDNI:focus{
+  outline: none;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
+  
+}
+
+.inputDNI::placeholder{
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.h3Nombre{
+  margin-left:47px;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.inputNombre{
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+  font-size: 1em;
   font-weight: 600;
   padding-left: 7px;
   padding-right: 7px;
-  margin-left: 48px;
+  margin-left: 27px;
   background: none;
+  outline: none;
+  width: 220px;
 }
 
-.inputCUIT:focus{
+.inputNombre:focus{
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.inputNombre::placeholder{
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.h3Apellido{
+  margin-left:48px;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.inputApellido{
+  border-radius: 10px;
+  border:none;
+  box-shadow: 0 .4rem .8rem #0005;
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 27px;
+  background: none;
+  width: 220px;
   outline: none;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.inputApellido:focus{
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
 }
 
-.h3_razonSocial{
-  margin-left:50px;
+.inputApellido::placeholder{
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
   font-style: italic;
 }
 
-.inputRazonSocial{
+.h3Servicio{
+  margin-left:48px;
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+.inputServicio{
   border-radius: 10px;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 600;
+  margin-left: 29px;
+  background: none;
+  width: 220px;
+  outline: none;
   padding-left: 7px;
   padding-right: 7px;
-  margin-left: 19px;
-  background: none;
 }
 
-.inputRazonSocial:focus{
-  outline: none;
+.inputServicio:focus{
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
 }
 
-.h3_direccion{
-  margin-left:57px;
+.inputServicio::placeholder{
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+  font-weight: normal;
   font-style: italic;
-}
-
-.inputDireccion{
-  border-radius: 10px;
-  border:none;
-  box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
-  font-weight: 600;
-  padding-left: 7px;
-  padding-right: 7px;
-  margin-left: 32px;
-  background: none;
-}
-
-.inputDireccion:focus{
-  outline: none;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
-  background-color: #fff;
-}
-
-.h3_telefono{
-  margin-left:58px;
-  font-style: italic;
-}
-
-.inputTelefono{
-  border-radius: 10px;
-  border:none;
-  box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
-  font-weight: 600;
-  padding-left: 7px;
-  padding-right: 7px;
-  margin-left: 39px;
-  background: none;
-}
-
-.inputTelefono:focus{
-  outline: none;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
-  background-color: #fff;
 }
 
 
@@ -186,7 +229,7 @@
   border-radius: 0.8rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.1em;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
   background: none;

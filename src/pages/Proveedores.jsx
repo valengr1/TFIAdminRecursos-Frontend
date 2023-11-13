@@ -119,43 +119,49 @@ function Proveedores() {
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
-        <button onClick={volverAIniciarSesión} className={styles.buttonSalir}>
-          <i className="fa-solid fa-arrow-left"></i>
-        </button>
-        <h2 className={styles.header_titulo}>Proveedores</h2>
-        <div className={styles.header_encargadoCaja}>
-          <i className="fa-regular fa-user"></i>
-          <h3 className={styles.encargadoNombre}>{encargado.nombre} </h3>
-        </div>
+        <Fade duration={2000}>
+          <button onClick={volverAIniciarSesión} className={styles.buttonSalir}>
+            <i className="fa-solid fa-arrow-left"></i>
+          </button>
+          <h2 className={styles.header_titulo}>Proveedores</h2>
+          <div className={styles.header_encargadoCaja}>
+            <i className="fa-regular fa-user"></i>
+            <h3 className={styles.encargadoNombre}>{encargado.nombre} </h3>
+          </div>
+        </Fade>
       </header>
       <main className={styles.main}>
         <form className={styles.form}>
           <div className={styles.busqueda}>
-            <div className={styles.form_buttonBuscar}>
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <label htmlFor="" className={styles.form_label}>
-              Razón social:
-            </label>
-            <input
-              type="text"
-              className={styles.form_input}
-              name="razonSocialBuscar"
-              onChange={handleChangeBusqueda}
-            />
+            <Fade duration={2000}>
+              <div className={styles.form_buttonBuscar}>
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </div>
+
+              <input
+                autoComplete="off"
+                type="text"
+                className={styles.form_input}
+                name="razonSocialBuscar"
+                onChange={handleChangeBusqueda}
+                placeholder="Razón social"
+              />
+            </Fade>
           </div>
           <div className={styles.botones}>
-            <button
-              onClick={agregarProveedor}
-              className={styles.form_buttonAgregar}
-            >
-              Agregar proveedor
-            </button>
+            <Fade duration={2000}>
+              <button
+                onClick={agregarProveedor}
+                className={styles.form_buttonAgregar}
+              >
+                Agregar proveedor
+              </button>
+            </Fade>
           </div>
         </form>
 
         <div className={styles.divTabla}>
-          <Fade duration={1500}>
+          <Fade duration={2000}>
             <table className={styles.table}>
               <thead className={styles.thead}>
                 <tr>
@@ -176,7 +182,7 @@ function Proveedores() {
                     <td>{proveedor.razonSocial}</td>
                     <td>{proveedor.direccion}</td>
                     <td>{proveedor.telefono}</td>
-                    <td>{proveedor.calificacion}</td>
+                    <td>{proveedor.calificacion} /100</td>
                     <td>
                       <Link
                         to={

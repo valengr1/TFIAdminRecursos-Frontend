@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/agregarProveedor.module.css";
+import styles from "../styles/agregarTecnico.module.css";
 import axios from "axios";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
@@ -76,20 +76,23 @@ function Tecnicos() {
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
-        <Link to={"/proveedores/" + encargadoLegajo}>
-          <button className={styles.buttonSalir}>
-            <i className="fa-solid fa-arrow-left"></i>
-          </button>
-        </Link>
-        <h2 className={styles.header_h2}>Agregar Técnico</h2>
-        <h3 className={styles.header_p}>
-          <i className="fa-regular fa-user">{encargado.nombre}</i>
-        </h3>
+        <Fade duration={2000}>
+          <Link to={"/proveedores/" + encargadoLegajo}>
+            <button className={styles.buttonSalir}>
+              <i className="fa-solid fa-arrow-left"></i>
+            </button>
+          </Link>
+          <h2 className={styles.header_titulo}>Agregar Técnico</h2>
+          <div className={styles.header_encargadoCaja}>
+            <i className="fa-regular fa-user"></i>
+            <h3 className={styles.encargadoNombre}>{encargado.nombre}</h3>
+          </div>
+        </Fade>
       </header>
       <main className={styles.main}>
         <Toaster position="bottom-right" reverseOrder={false} />
         <form className={styles.form} onSubmit={agregarTecnico}>
-          <Fade duration={1500}>
+          <Fade duration={2000}>
             <h2 className={styles.h2}>Nuevo técnico</h2>
             <div className={styles.div1}>
               <h3 className={styles.h3_CUIT}>
@@ -97,42 +100,42 @@ function Tecnicos() {
               </h3>
             </div>
             <div className={styles.div}>
-              <h3 className={styles.h3_razonSocial}>DNI</h3>
+              <h3 className={styles.h3DNI}>DNI</h3>
               <input
                 type="text"
                 name="dni"
                 onChange={handleChange}
-                className={styles.inputRazonSocial}
+                className={styles.inputDNI}
                 required
               />
             </div>
             <div className={styles.div}>
-              <h3 className={styles.h3_razonSocial}>Nombre</h3>
+              <h3 className={styles.h3Nombre}>Nombre</h3>
               <input
                 type="text"
                 name="nombre"
                 onChange={handleChange}
-                className={styles.inputRazonSocial}
+                className={styles.inputNombre}
                 required
               />
             </div>
             <div className={styles.div}>
-              <h3 className={styles.h3_direccion}>Apellido</h3>
+              <h3 className={styles.h3Apellido}>Apellido</h3>
               <input
                 type="text"
                 name="apellido"
                 onChange={handleChange}
-                className={styles.inputDireccion}
+                className={styles.inputApellido}
                 required
               />
             </div>
             <div className={styles.div}>
-              <h3 className={styles.h3_telefono}>Servicio</h3>
+              <h3 className={styles.h3Servicio}>Servicio</h3>
               <input
                 type="text"
                 name="servicio"
                 onChange={handleChange}
-                className={styles.inputTelefono}
+                className={styles.inputServicio}
                 required
               />
             </div>

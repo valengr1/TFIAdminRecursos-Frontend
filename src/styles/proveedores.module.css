@@ -6,7 +6,7 @@
 
 body{
   min-height: 100vh;
-    background: url("../../images/backiee-25554-landscape.jpg") center / cover;
+    background: url("../../images/backiee-73460-landscape.jpg") center / cover;
     align-items: center;
 }
 
@@ -31,21 +31,22 @@ body{
   background: rgba(255,255,255,0.6);
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  
   color: #fff;
 }
 
 .buttonSalir:hover{
   scale: 1.02;
-  color: rgb(166, 218, 255);
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
 }
 
 .header_titulo{
-  font-size: 1.9em;
-  font-family: 'Playfair Display', serif;
-  font-weight: 100;
+  font-size: 1.6em;
+  font-weight: 600;
   color: #fff;
   cursor: pointer;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1);
+
 }
 
 .header_encargadoCaja{
@@ -54,7 +55,7 @@ body{
   justify-content: center;
   gap: 10px;
   font-size: 1.1em;
-  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fff , 0 0 70px #fff , 0 0 80px #fff , 0 0 100px #fff ;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1);
   color: #fff;
   cursor: pointer;
 }
@@ -90,27 +91,28 @@ body{
   gap: 50%;
 }
 
-.form_label{
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #000;
-}
 
 .form_input{
   height: 20px;
   border-radius: 10px;
-  padding-left: 7px;
   border: none;
-  box-shadow: 0 .4rem .8rem #0005;
+  box-shadow: 0 .2rem .4rem #0005;
   background: none;
   outline: none;
   font-size: 1.1em;
-  padding-bottom: 4px;
+}
+
+.form_input::placeholder{
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
 }
 
 .form_input:focus{
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+  padding-left: 7px;
+  padding-right: 7px;
 }
 
 .form_buttonBuscar{
@@ -119,7 +121,6 @@ body{
   background: none;
   border-radius: 0.8rem;
   cursor: pointer;
-  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fff , 0 0 70px #fff , 0 0 80px #fff , 0 0 100px #fff ;
 }
 
 .form_buttonAgregar{
@@ -129,17 +130,15 @@ body{
   font-size: 15px;
   border: none;
   cursor: pointer;
-  color: black;
+  color: #fff;
   font-weight: 600;
   background: none;
-  box-shadow: 0 .4rem .8rem #0005;
   font-size: 1.2em;
 }
 
 .form_buttonAgregar:hover{
-  box-shadow: inset 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
-  backdrop-filter: blur(20px);
-  background-color: white;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fff , 0 0 70px #fff , 0 0 80px #fff , 0 0 100px #fff ;
+
 }
 
 .divTabla{
@@ -151,7 +150,7 @@ body{
     overflow: auto;
     overflow: overlay;
     backdrop-filter: blur(7px);
-    box-shadow: 0 .4rem .8rem #0005;
+    box-shadow: 0 .4rem .7rem rgba(0, 0, 0, 0.4);
 }
 
 .divTabla::-webkit-scrollbar{
@@ -171,7 +170,7 @@ body{
 
 .table{
     width: 100%;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .buttonEliminar{
@@ -180,11 +179,12 @@ body{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: rgb(254, 0, 10);
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
+  background: none;
+  color: rgb(254, 0, 10);
 }
 
 i{
@@ -196,6 +196,7 @@ i{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+  
 }
 
 .buttonEditar{
@@ -204,17 +205,19 @@ i{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: rgb(36, 61, 156);
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
+  background: none;
+  color: rgb(37, 79, 244);
 }
 
 .buttonEditar:hover{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+  
 }
 
 .buttonAgregarTecnico{
@@ -223,7 +226,8 @@ i{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: rgb(1, 167, 55);
+  background: none;
+  color: rgb(33, 255, 40);
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
@@ -234,6 +238,7 @@ i{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+  
 }
 
 .buttonCompras{
@@ -242,7 +247,8 @@ i{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: #3f2cb9;
+  background: none;
+  color: rgb(151, 59, 250);
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
@@ -253,6 +259,7 @@ i{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+  
 }
 
 td img {
@@ -295,7 +302,7 @@ tbody tr.hide {
 }
 
 tbody tr:hover {
-  background-color: rgba(166, 218, 255, 0.5) !important;
+  background-color: rgba(61, 61, 61, 0.2) !important;
 }
 
 tbody tr td,

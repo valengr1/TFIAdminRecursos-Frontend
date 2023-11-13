@@ -59,30 +59,36 @@ function VencimientoGarantia() {
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
-        <Link to={"/compras/" + encargadoLegajo + "/" + idProveedor}>
-          <button className={styles.buttonSalir}>
-            <i className="fa-solid fa-arrow-left"></i>
-          </button>
-        </Link>
+        <Fade duration={2000}>
+          <Link to={"/compras/" + encargadoLegajo + "/" + idProveedor}>
+            <button className={styles.buttonSalir}>
+              <i className="fa-solid fa-arrow-left"></i>
+            </button>
+          </Link>
 
-        <h2 className={styles.header_titulo}>
-          Productos por perder su garantía
-        </h2>
-        <div className={styles.header_encargadoCaja}>
-          <i className="fa-regular fa-user"></i>
-          <h3>{encargado.nombre}</h3>
-        </div>
+          <h2 className={styles.header_titulo}>
+            Productos por perder su garantía
+          </h2>
+          <div className={styles.header_encargadoCaja}>
+            <i className="fa-regular fa-user"></i>
+            <h3>{encargado.nombre}</h3>
+          </div>
+        </Fade>
       </header>
       <main className={styles.main}>
         <div className={styles.form}>
           <div className={styles.busqueda}>
-            <h2>Proveedor</h2>
-            <h3>CUIT: {proveedor.cuit}</h3>
-            <h3>Razón social: {proveedor.razonSocial}</h3>
+            <Fade duration={2000}>
+              <h2 className={styles.h2Proveedor}>Proveedor</h2>
+              <h3 className={styles.h3CUIT}>CUIT: {proveedor.cuit}</h3>
+              <h3 className={styles.h3RazonSocial}>
+                Razón social: {proveedor.razonSocial}
+              </h3>
+            </Fade>
           </div>
         </div>
         <div className={styles.divTabla}>
-          <Fade duration={1500}>
+          <Fade duration={2000}>
             <table className={styles.table}>
               <thead className={styles.thead}>
                 <tr>
@@ -97,7 +103,7 @@ function VencimientoGarantia() {
                   <tr key={detalle.id}>
                     <td>{detalle.id}</td>
                     <td>{detalle.equipamiento.descripcion}</td>
-                    <td>{detalle.equipamiento.costo}</td>
+                    <td>${detalle.equipamiento.costo}</td>
                     <td>{detalle.equipamiento.garantia}</td>
                   </tr>
                 ))}

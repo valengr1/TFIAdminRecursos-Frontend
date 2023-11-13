@@ -21,7 +21,6 @@
   background: rgba(255,255,255,0.6);
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
-  
   color: #fff;
 }
 
@@ -76,9 +75,10 @@
   margin-top: 20px;
 }
 
-.div1{
-  display: flex;
-  margin-top: 40px;
+.h3_CUIT{
+  margin-top: 20px;
+  margin-bottom: 25px;
+  font-style: italic;
 }
 
 .div{
@@ -86,96 +86,103 @@
   margin-top: 15px;
 }
 
-.h3_CUIT{
-  margin-left:76px;
-  font-style: italic;
-}
-
-.inputCUIT{
-  border-radius: 10px;
-  border:none;
-  box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
-  font-weight: 600;
-  padding-left: 7px;
-  padding-right: 7px;
-  margin-left: 48px;
-  background: none;
-}
-
-.inputCUIT:focus{
-  outline: none;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
-  background-color: #fff;
-}
-
 .h3_razonSocial{
-  margin-left:50px;
+  margin-left:40px;
   font-style: italic;
+  font-size: 1.2em;
 }
 
 .inputRazonSocial{
   border-radius: 10px;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 600;
+  margin-left: 9px;
   padding-left: 7px;
   padding-right: 7px;
-  margin-left: 19px;
   background: none;
+  width: 220px;
 }
 
 .inputRazonSocial:focus{
   outline: none;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+  
+}
+
+.inputRazonSocial::placeholder{
+  font-size: 1.1em;
+  color: #000;
+  text-align: center;
+  font-weight: normal;
 }
 
 .h3_direccion{
-  margin-left:57px;
+  margin-left:47px;
   font-style: italic;
+  font-size: 1.2em;
 }
 
 .inputDireccion{
   border-radius: 10px;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 600;
   padding-left: 7px;
   padding-right: 7px;
-  margin-left: 32px;
+  margin-left: 22px;
   background: none;
+  outline: none;
+  width: 220px;
 }
 
 .inputDireccion:focus{
-  outline: none;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.inputDireccion::placeholder{
+  font-size: 1.1em;
+  color: #000;
+  text-align: center;
+  font-weight: normal;
 }
 
 .h3_telefono{
-  margin-left:58px;
+  margin-left:48px;
   font-style: italic;
+  font-size: 1.2em;
 }
 
 .inputTelefono{
   border-radius: 10px;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
-  font-size: 15px;
+  font-size: 1em;
   font-weight: 600;
+  margin-left: 29px;
+  background: none;
+  width: 220px;
+  outline: none;
   padding-left: 7px;
   padding-right: 7px;
-  margin-left: 39px;
-  background: none;
 }
 
 .inputTelefono:focus{
-  outline: none;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
+}
+
+.inputTelefono::placeholder{
+  font-size: 1.1em;
+  color: #000;
+  text-align: center;
+  font-weight: normal;
 }
 
 
@@ -186,7 +193,7 @@
   border-radius: 0.8rem;
   cursor: pointer;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.1em;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
   background: none;

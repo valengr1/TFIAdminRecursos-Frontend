@@ -58,6 +58,7 @@ function Compras() {
     getCompras();
     getProveedor();
     getEncargado();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const verDetalleCompra = (id) => {
@@ -74,43 +75,52 @@ function Compras() {
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
-        <Link to={"/proveedores/" + encargadoLegajo}>
-          <button className={styles.buttonSalir}>
-            <i className="fa-solid fa-arrow-left"></i>
-          </button>
-        </Link>
+        <Fade duration={2000}>
+          <Link to={"/proveedores/" + encargadoLegajo}>
+            <button className={styles.buttonSalir}>
+              <i className="fa-solid fa-arrow-left"></i>
+            </button>
+          </Link>
 
-        <h2 className={styles.header_titulo}>Compras</h2>
-        <div className={styles.header_encargadoCaja}>
-          <i className="fa-regular fa-user"></i>
-          <h3>{encargado.nombre}</h3>
-        </div>
+          <h2 className={styles.header_titulo}>Compras</h2>
+          <div className={styles.header_encargadoCaja}>
+            <i className="fa-regular fa-user"></i>
+            <h3>{encargado.nombre}</h3>
+          </div>
+        </Fade>
       </header>
       <main className={styles.main}>
         <div className={styles.form}>
           <div className={styles.busqueda}>
-            <h2>Proveedor</h2>
-            <h3>CUIT: {proveedor.cuit}</h3>
-            <h3>Razón social: {proveedor.razonSocial}</h3>
-            <Link
-              to={
-                "/vencimientoDeGarantia/" + encargadoLegajo + "/" + idProveedor
-              }
-            >
-              <button className={styles.buttonVerDetalle}>
-                Vencimiento de garantias
-              </button>
-            </Link>
+            <Fade duration={2000}>
+              <h2 className={styles.h2Proveedor}>Proveedor</h2>
+              <h3 className={styles.h3CUIT}>CUIT: {proveedor.cuit}</h3>
+              <h3 className={styles.h3RazonSocial}>
+                Razón social: {proveedor.razonSocial}
+              </h3>
+              <Link
+                to={
+                  "/vencimientoDeGarantia/" +
+                  encargadoLegajo +
+                  "/" +
+                  idProveedor
+                }
+              >
+                <button className={styles.buttonVencimientoGarantias}>
+                  Vencimiento de garantias
+                </button>
+              </Link>
+            </Fade>
           </div>
         </div>
         <div className={styles.divTabla}>
-          <Fade duration={1500}>
+          <Fade duration={2000}>
             <table className={styles.table}>
               <thead className={styles.thead}>
                 <tr>
                   <th>Id</th>
-                  <th>Nombre de Encargado</th>
-                  <th>Fecha de compra</th>
+                  <th>Encargado</th>
+                  <th>Fecha</th>
                   <th>Total</th>
                   <th>Acción</th>
                 </tr>
@@ -125,7 +135,7 @@ function Compras() {
                         compra.encargadoCompras.apellido}
                     </td>
                     <td>{compra.fechaCompra}</td>
-                    <td>{compra.total}</td>
+                    <td>${compra.total}</td>
                     <td>
                       <button
                         onClick={() => {
@@ -144,7 +154,9 @@ function Compras() {
         </div>
         <div className={styles.form}>
           <div className={styles.busqueda}>
-            <h2>Detalle de compra: {idCompra}</h2>
+            <Fade duration={2000}>
+              <h2>Detalle de la compra de id: {idCompra}</h2>
+            </Fade>
           </div>
         </div>
         <div className={styles.divTabla}>
@@ -152,11 +164,11 @@ function Compras() {
             <table className={styles.table}>
               <thead className={styles.thead}>
                 <tr>
-                  <th>Id equipamiento</th>
-                  <th>Descripción del equipamiento</th>
+                  <th>Id</th>
+                  <th>Descripción </th>
                   <th>Vencimiento de garantía</th>
                   <th>Cantidad</th>
-                  <th>Precio del equipamiento</th>
+                  <th>Precio</th>
                   <th>Subtotal</th>
                   <th>Fecha esperada</th>
                   <th>Fecha de entrega</th>
@@ -169,8 +181,8 @@ function Compras() {
                     <td>{detalle.equipamiento.descripcion}</td>
                     <td>{detalle.equipamiento.garantia}</td>
                     <td>{detalle.cantidad}</td>
-                    <td>{detalle.equipamiento.costo}</td>
-                    <td>{detalle.subtotal}</td>
+                    <td>${detalle.equipamiento.costo}</td>
+                    <td>${detalle.subtotal}</td>
                     <td>{detalle.fechaEsperada}</td>
                     <td>{detalle.fechaEntrega}</td>
                   </tr>

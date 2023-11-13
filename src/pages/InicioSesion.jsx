@@ -53,7 +53,7 @@ function InicioSesion() {
     <main className={styles.main}>
       <Toaster position="top-right" reverseOrder={false} />
       <form className={styles.form} onSubmit={buscarEncargado}>
-        <Fade duration={1500}>
+        <Fade duration={2000}>
           <h2 className={styles.h2}>Iniciar sesión</h2>
           <div className={styles.div1}>
             <div className={styles.iconoUser}>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/agregarProveedor.module.css";
+import styles from "../styles/modificarProveedor.module.css";
 import axios from "axios";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
@@ -70,27 +70,32 @@ function ModificarProveedor() {
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
-        <Link to={"/proveedores/" + encargadoLegajo}>
-          <button className={styles.buttonSalir}>
-            <i className="fa-solid fa-arrow-left"></i>
-          </button>
-        </Link>
-        <h2 className={styles.header_h2}>Gestión de proveedores</h2>
-        <h3 className={styles.header_p}>
-          <i className="fa-regular fa-user">{encargado.nombre}</i>
-        </h3>
+        <Fade duration={2000}>
+          <Link to={"/proveedores/" + encargadoLegajo}>
+            <button className={styles.buttonSalir}>
+              <i className="fa-solid fa-arrow-left"></i>
+            </button>
+          </Link>
+          <h2 className={styles.header_titulo}>Modificar proveedor</h2>
+          <div className={styles.header_encargadoCaja}>
+            <i className="fa-regular fa-user"></i>
+            <h3 className={styles.header_encargadoNombre}>
+              {encargado.nombre}
+            </h3>
+          </div>
+        </Fade>
       </header>
       <main className={styles.main}>
         <Toaster position="bottom-right" reverseOrder={false} />
         <form className={styles.form} onSubmit={modificarProveedor}>
-          <Fade duration={1500}>
-            <h2 className={styles.h2}>Modificar proveedor</h2>
-            <div className={styles.div1}>
-              <h3 className={styles.h3_CUIT}>CUIT: {proveedor.cuit}</h3>
-            </div>
+          <Fade duration={2000}>
+            <h2 className={styles.h2}>Datos del proveedor</h2>
+            <h3 className={styles.h3_CUIT}>CUIT: {proveedor.cuit}</h3>
+
             <div className={styles.div}>
               <h3 className={styles.h3_razonSocial}>Razón social</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="razonSocial"
                 onChange={handleChange}
@@ -102,6 +107,7 @@ function ModificarProveedor() {
             <div className={styles.div}>
               <h3 className={styles.h3_direccion}>Dirección</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="direccion"
                 onChange={handleChange}
@@ -113,6 +119,7 @@ function ModificarProveedor() {
             <div className={styles.div}>
               <h3 className={styles.h3_telefono}>Teléfono</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="telefono"
                 onChange={handleChange}

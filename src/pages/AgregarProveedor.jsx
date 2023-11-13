@@ -64,16 +64,18 @@ function AgregarProveedor() {
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
-        <Link to={"/proveedores/" + encargadoLegajo}>
-          <button className={styles.buttonSalir}>
-            <i className="fa-solid fa-arrow-left"></i>
-          </button>
-        </Link>
-        <h2 className={styles.header_h2}>Agregar proveedor</h2>
-        <div className={styles.header_encargadoCaja}>
-          <i className="fa-regular fa-user"></i>
-          <h3 className={styles.encargadoNombre}>{encargado.nombre} </h3>
-        </div>
+        <Fade duration={2000}>
+          <Link to={"/proveedores/" + encargadoLegajo}>
+            <button className={styles.buttonSalir}>
+              <i className="fa-solid fa-arrow-left"></i>
+            </button>
+          </Link>
+          <h2 className={styles.header_titulo}>Agregar proveedor</h2>
+          <div className={styles.header_encargadoCaja}>
+            <i className="fa-regular fa-user"></i>
+            <h3 className={styles.encargadoNombre}>{encargado.nombre} </h3>
+          </div>
+        </Fade>
       </header>
       <main className={styles.main}>
         <Toaster position="bottom-right" reverseOrder={false} />
@@ -83,6 +85,7 @@ function AgregarProveedor() {
             <div className={styles.div1}>
               <h3 className={styles.h3_CUIT}>CUIT</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="cuit"
                 className={styles.inputCUIT}
@@ -93,6 +96,7 @@ function AgregarProveedor() {
             <div className={styles.div}>
               <h3 className={styles.h3_razonSocial}>Razón social</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="razonSocial"
                 onChange={handleChange}
@@ -103,6 +107,7 @@ function AgregarProveedor() {
             <div className={styles.div}>
               <h3 className={styles.h3_direccion}>Dirección</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="direccion"
                 onChange={handleChange}
@@ -113,6 +118,7 @@ function AgregarProveedor() {
             <div className={styles.div}>
               <h3 className={styles.h3_telefono}>Teléfono</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="telefono"
                 onChange={handleChange}
