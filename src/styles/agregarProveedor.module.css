@@ -1,22 +1,16 @@
-.principal{
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-}
+
 
 .header{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30%;
-  box-shadow: 0 .4rem .8rem #0005;
   height: 3em;
   background-color: rgba(255,255,255,0.1);
   backdrop-filter: blur(4px);
   border-radius: 0.8rem;
   text-align: center;
+  box-shadow: 0 .4rem .8rem #0005;
 }
 
 .buttonSalir{
@@ -28,19 +22,39 @@
   background: rgba(255,255,255,0.6);
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  color: #fff;
 }
 
 .buttonSalir:hover{
   scale: 1.02;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  color: rgb(166, 218, 255);
 }
 
 .header_h2{
-  font-size: 1.5em;
+  font-size: 1.6em;
+  font-family: 'Playfair Display', serif;
+  font-weight: 100;
+  color: #fff;
 }
 
-.header_p{
-  font-size: 0.8em;
+.header_h2:hover{   
+  cursor: pointer;
+}
+
+.header_encargadoCaja{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 1.1em;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fff , 0 0 70px #fff , 0 0 80px #fff , 0 0 100px #fff ;
+
+}
+
+.header_encargadoCaja:hover{
+  cursor: pointer;
 }
 
 .main{
@@ -65,7 +79,8 @@
 .h2{
   font-weight: 600;
   border:none;
-  box-shadow: 0 .4rem .8rem #0005;
+  font-size: 1.4em;
+  margin-top: 20px;
 }
 
 .div1{
@@ -79,7 +94,7 @@
 }
 
 .h3_CUIT{
-  margin-left:80px;
+  margin-left:76px;
   font-style: italic;
 }
 
@@ -90,7 +105,15 @@
   font-size: 15px;
   font-weight: 600;
   padding-left: 7px;
-  margin-left: 44px;
+  padding-right: 7px;
+  margin-left: 48px;
+  background: none;
+}
+
+.inputCUIT:focus{
+  outline: none;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 .h3_razonSocial{
@@ -105,11 +128,19 @@
   font-size: 15px;
   font-weight: 600;
   padding-left: 7px;
-  margin-left: 10px;
+  padding-right: 7px;
+  margin-left: 19px;
+  background: none;
+}
+
+.inputRazonSocial:focus{
+  outline: none;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 .h3_direccion{
-  margin-left:60px;
+  margin-left:57px;
   font-style: italic;
 }
 
@@ -120,11 +151,19 @@
   font-size: 15px;
   font-weight: 600;
   padding-left: 7px;
-  margin-left: 28px;
+  padding-right: 7px;
+  margin-left: 32px;
+  background: none;
+}
+
+.inputDireccion:focus{
+  outline: none;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 .h3_telefono{
-  margin-left:60px;
+  margin-left:58px;
   font-style: italic;
 }
 
@@ -135,7 +174,15 @@
   font-size: 15px;
   font-weight: 600;
   padding-left: 7px;
-  margin-left: 33px;
+  padding-right: 7px;
+  margin-left: 39px;
+  background: none;
+}
+
+.inputTelefono:focus{
+  outline: none;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 
@@ -149,9 +196,12 @@
   font-size: 16px;
   border:none;
   box-shadow: 0 .4rem .8rem #0005;
+  background: none;
 }
 
 .button:hover{
   scale: 1.02;
   padding-bottom: 1px;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }

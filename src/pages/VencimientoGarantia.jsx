@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "../styles/vencimientoGarantia.module.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Fade } from "react-awesome-reveal";
 
 function VencimientoGarantia() {
   const [encargado, setEncargado] = useState({
@@ -81,26 +82,28 @@ function VencimientoGarantia() {
           </div>
         </div>
         <div className={styles.divTabla}>
-          <table className={styles.table}>
-            <thead className={styles.thead}>
-              <tr>
-                <th>Id</th>
-                <th>Descripcion</th>
-                <th>Costo</th>
-                <th>Último día de garantía</th>
-              </tr>
-            </thead>
-            <tbody className={styles.tbody}>
-              {detalles.map((detalle) => (
-                <tr key={detalle.id}>
-                  <td>{detalle.id}</td>
-                  <td>{detalle.equipamiento.descripcion}</td>
-                  <td>{detalle.equipamiento.costo}</td>
-                  <td>{detalle.equipamiento.garantia}</td>
+          <Fade duration={1500}>
+            <table className={styles.table}>
+              <thead className={styles.thead}>
+                <tr>
+                  <th>Id</th>
+                  <th>Descripcion</th>
+                  <th>Costo</th>
+                  <th>Último día de garantía</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className={styles.tbody}>
+                {detalles.map((detalle) => (
+                  <tr key={detalle.id}>
+                    <td>{detalle.id}</td>
+                    <td>{detalle.equipamiento.descripcion}</td>
+                    <td>{detalle.equipamiento.costo}</td>
+                    <td>{detalle.equipamiento.garantia}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Fade>
         </div>
         ;
       </main>

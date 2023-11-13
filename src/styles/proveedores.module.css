@@ -4,15 +4,9 @@
   box-sizing: border-box;
 }
 
-.principal{
-    min-height: 100vh;
-    background: url("../../images/backiee-59456-landscape.jpg") center / cover;
-    align-items: center;
-}
-
 body{
   min-height: 100vh;
-    background: url("../../images/backiee-59456-landscape.jpg") center / cover;
+    background: url("../../images/backiee-25554-landscape.jpg") center / cover;
     align-items: center;
 }
 
@@ -33,20 +27,25 @@ body{
   height: 40px;
   width: 40px;
   cursor: pointer;
-  color: black;
   border: none;
   background: rgba(255,255,255,0.6);
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  color: #fff;
 }
 
 .buttonSalir:hover{
   scale: 1.02;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  color: rgb(166, 218, 255);
 }
 
 .header_titulo{
-  font-size: 1.5em;
+  font-size: 1.9em;
+  font-family: 'Playfair Display', serif;
+  font-weight: 100;
+  color: #fff;
+  cursor: pointer;
 }
 
 .header_encargadoCaja{
@@ -54,10 +53,10 @@ body{
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-
-h3{
-  
+  font-size: 1.1em;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fff , 0 0 70px #fff , 0 0 80px #fff , 0 0 100px #fff ;
+  color: #fff;
+  cursor: pointer;
 }
 
 .form{
@@ -67,7 +66,7 @@ h3{
   justify-content: center;
   box-shadow: 0 .4rem .8rem #0005;
   background-color: rgba(255,255,255,0.4);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(10px);
   border-radius: 0.8rem;
   width: 80vw;
   text-align: center;
@@ -80,7 +79,7 @@ h3{
   align-items: center;
   justify-content: center;
   width: 50%;
-  gap: 15px;
+  gap: 12px;
 }
 
 .botones{
@@ -92,45 +91,55 @@ h3{
 }
 
 .form_label{
-  
-  font-size: 16px;
+  font-size: 1.2em;
   font-weight: 600;
   color: #000;
 }
 
 .form_input{
-  
   height: 20px;
   border-radius: 10px;
   padding-left: 7px;
   border: none;
   box-shadow: 0 .4rem .8rem #0005;
+  background: none;
+  outline: none;
+  font-size: 1.1em;
+  padding-bottom: 4px;
+}
+
+.form_input:focus{
+  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 .form_buttonBuscar{
-  
-  color: rgb(0, 0, 0);
+  color: #fff;
   border: none;
   background: none;
   border-radius: 0.8rem;
+  cursor: pointer;
+  text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #fff , 0 0 70px #fff , 0 0 80px #fff , 0 0 100px #fff ;
 }
 
 .form_buttonAgregar{
   height: 24px;
-  width: 140px;
+  width: 200px;
   border-radius: 0.8rem;
   font-size: 15px;
   border: none;
   cursor: pointer;
   color: black;
   font-weight: 600;
-  background: rgba(255,255,255,0.6);
+  background: none;
   box-shadow: 0 .4rem .8rem #0005;
+  font-size: 1.2em;
 }
 
 .form_buttonAgregar:hover{
-  scale: 1.02;
-  box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  box-shadow: inset 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+  backdrop-filter: blur(20px);
+  background-color: white;
 }
 
 .divTabla{
@@ -162,6 +171,7 @@ h3{
 
 .table{
     width: 100%;
+    font-size: 1.2em;
 }
 
 .buttonEliminar{
@@ -170,7 +180,7 @@ h3{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: red;
+  color: rgb(254, 0, 10);
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
@@ -185,6 +195,7 @@ i{
 .buttonEliminar:hover{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 .buttonEditar{
@@ -193,7 +204,7 @@ i{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: blue;
+  color: rgb(36, 61, 156);
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
@@ -203,6 +214,7 @@ i{
 .buttonEditar:hover{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 .buttonAgregarTecnico{
@@ -211,7 +223,7 @@ i{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: green;
+  color: rgb(1, 167, 55);
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
@@ -221,6 +233,7 @@ i{
 .buttonAgregarTecnico:hover{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 .buttonCompras{
@@ -229,7 +242,7 @@ i{
   margin-left: 10px;
   margin-bottom: 5px;
   cursor: pointer;
-  color: purple;
+  color: #3f2cb9;
   border: none;
   background: transparent;
   box-shadow: 0 .4rem .8rem #0005;
@@ -239,6 +252,7 @@ i{
 .buttonCompras:hover{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
+  background-color: #fff;
 }
 
 td img {
@@ -260,13 +274,14 @@ thead th {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: #d5d1defe;
+  background-color: #fff;
   cursor: pointer;
   text-transform: capitalize;
+  text-align: center;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #0000000b;
+  background-color: rgba(255,255,255,0.6);
 }
 
 tbody tr {
@@ -280,13 +295,14 @@ tbody tr.hide {
 }
 
 tbody tr:hover {
-  background-color: #fff6 !important;
+  background-color: rgba(166, 218, 255, 0.5) !important;
 }
 
 tbody tr td,
 tbody tr td p,
 tbody tr td img {
   transition: .2s ease-in-out;
+  text-align: center;
 }
 
 tbody tr.hide td,

@@ -3,6 +3,7 @@ import styles from "../styles/agregarProveedor.module.css";
 import axios from "axios";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import { Fade } from "react-awesome-reveal";
 
 function ModificarProveedor() {
   const [encargado, setEncargado] = useState({
@@ -82,44 +83,46 @@ function ModificarProveedor() {
       <main className={styles.main}>
         <Toaster position="bottom-right" reverseOrder={false} />
         <form className={styles.form} onSubmit={modificarProveedor}>
-          <h2 className={styles.h2}>Modificar proveedor</h2>
-          <div className={styles.div1}>
-            <h3 className={styles.h3_CUIT}>CUIT: {proveedor.cuit}</h3>
-          </div>
-          <div className={styles.div}>
-            <h3 className={styles.h3_razonSocial}>Razón social</h3>
-            <input
-              type="text"
-              name="razonSocial"
-              onChange={handleChange}
-              className={styles.inputRazonSocial}
-              required
-              placeholder={proveedor.razonSocial}
-            />
-          </div>
-          <div className={styles.div}>
-            <h3 className={styles.h3_direccion}>Dirección</h3>
-            <input
-              type="text"
-              name="direccion"
-              onChange={handleChange}
-              className={styles.inputDireccion}
-              required
-              placeholder={proveedor.direccion}
-            />
-          </div>
-          <div className={styles.div}>
-            <h3 className={styles.h3_telefono}>Teléfono</h3>
-            <input
-              type="text"
-              name="telefono"
-              onChange={handleChange}
-              className={styles.inputTelefono}
-              required
-              placeholder={proveedor.telefono}
-            />
-          </div>
-          <button className={styles.button}>Modificar</button>
+          <Fade duration={1500}>
+            <h2 className={styles.h2}>Modificar proveedor</h2>
+            <div className={styles.div1}>
+              <h3 className={styles.h3_CUIT}>CUIT: {proveedor.cuit}</h3>
+            </div>
+            <div className={styles.div}>
+              <h3 className={styles.h3_razonSocial}>Razón social</h3>
+              <input
+                type="text"
+                name="razonSocial"
+                onChange={handleChange}
+                className={styles.inputRazonSocial}
+                required
+                placeholder={proveedor.razonSocial}
+              />
+            </div>
+            <div className={styles.div}>
+              <h3 className={styles.h3_direccion}>Dirección</h3>
+              <input
+                type="text"
+                name="direccion"
+                onChange={handleChange}
+                className={styles.inputDireccion}
+                required
+                placeholder={proveedor.direccion}
+              />
+            </div>
+            <div className={styles.div}>
+              <h3 className={styles.h3_telefono}>Teléfono</h3>
+              <input
+                type="text"
+                name="telefono"
+                onChange={handleChange}
+                className={styles.inputTelefono}
+                required
+                placeholder={proveedor.telefono}
+              />
+            </div>
+            <button className={styles.button}>Modificar</button>
+          </Fade>
         </form>
       </main>
     </div>

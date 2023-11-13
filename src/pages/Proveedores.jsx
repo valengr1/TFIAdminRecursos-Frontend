@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import styles from "../styles/proveedores.module.css";
 import Swal from "sweetalert2";
+import { Fade } from "react-awesome-reveal";
 
 function Proveedores() {
   const navigate = useNavigate();
@@ -64,19 +65,20 @@ function Proveedores() {
 
   const agregarProveedor = (e) => {
     e.preventDefault();
+
     navigate("/agregarProveedor/" + encargado.legajo);
   };
 
   const eliminarProveedor = (id) => {
     Swal.fire({
       title: "Estas seguro?",
-      text: "No podras revertir los cambios",
+      text: "Se eliminarán las compras y detalles de compra del proveedor",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       cancelButtonText: "Cancelar",
-      confirmButtonText: "Si, eliminalo",
+      confirmButtonText: "Si, deseo eliminarlo",
     }).then((result) => {
       if (result.isConfirmed) {
         axios
@@ -123,7 +125,7 @@ function Proveedores() {
         <h2 className={styles.header_titulo}>Proveedores</h2>
         <div className={styles.header_encargadoCaja}>
           <i className="fa-regular fa-user"></i>
-          <h3>{encargado.nombre} </h3>
+          <h3 className={styles.encargadoNombre}>{encargado.nombre} </h3>
         </div>
       </header>
       <main className={styles.main}>
@@ -151,69 +153,72 @@ function Proveedores() {
             </button>
           </div>
         </form>
+
         <div className={styles.divTabla}>
-          <table className={styles.table}>
-            <thead className={styles.thead}>
-              <tr>
-                <th>Id</th>
-                <th>CUIT</th>
-                <th>Razón social</th>
-                <th>Dirección</th>
-                <th>Teléfono</th>
-                <th>Calificación</th>
-                <th>Acción</th>
-              </tr>
-            </thead>
-            <tbody className={styles.tbody}>
-              {results.map((proveedor) => (
-                <tr key={proveedor.cuit}>
-                  <td>{proveedor.id}</td>
-                  <td>{proveedor.cuit}</td>
-                  <td>{proveedor.razonSocial}</td>
-                  <td>{proveedor.direccion}</td>
-                  <td>{proveedor.telefono}</td>
-                  <td>{proveedor.calificacion}</td>
-                  <td>
-                    <Link
-                      to={
-                        "/modificarProveedor/" +
-                        encargadoLegajo +
-                        "/" +
-                        proveedor.id
-                      }
-                    >
-                      <button className={styles.buttonEditar}>
-                        <i className="fa-solid fa-pencil"></i>
-                      </button>
-                    </Link>
-                    <button
-                      onClick={() => {
-                        eliminarProveedor(proveedor.id);
-                      }}
-                      href=""
-                      className={styles.buttonEliminar}
-                    >
-                      <i className="fa-solid fa-trash-can"></i>
-                    </button>
-                    <Link
-                      to={"/compras/" + encargadoLegajo + "/" + proveedor.id}
-                    >
-                      <button className={styles.buttonCompras}>
-                        <i className="fa-solid fa-cart-shopping"></i>
-                      </button>
-                    </Link>
-                    <Link
-                      to={"/tecnicos/" + encargadoLegajo + "/" + proveedor.id}
-                    >
-                      <button href="" className={styles.buttonAgregarTecnico}>
-                        <i className="fa-solid fa-user-plus"></i>
-                      </button>
-                    </Link>
-                  </td>
+          <Fade duration={1500}>
+            <table className={styles.table}>
+              <thead className={styles.thead}>
+                <tr>
+                  <th>Id</th>
+                  <th>CUIT</th>
+                  <th>Razón social</th>
+                  <th>Dirección</th>
+                  <th>Teléfono</th>
+                  <th>Calificación</th>
+                  <th>Acción</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className={styles.tbody}>
+                {results.map((proveedor) => (
+                  <tr key={proveedor.cuit}>
+                    <td>{proveedor.id}</td>
+                    <td>{proveedor.cuit}</td>
+                    <td>{proveedor.razonSocial}</td>
+                    <td>{proveedor.direccion}</td>
+                    <td>{proveedor.telefono}</td>
+                    <td>{proveedor.calificacion}</td>
+                    <td>
+                      <Link
+                        to={
+                          "/modificarProveedor/" +
+                          encargadoLegajo +
+                          "/" +
+                          proveedor.id
+                        }
+                      >
+                        <button className={styles.buttonEditar}>
+                          <i className="fa-solid fa-pencil"></i>
+                        </button>
+                      </Link>
+                      <button
+                        onClick={() => {
+                          eliminarProveedor(proveedor.id);
+                        }}
+                        href=""
+                        className={styles.buttonEliminar}
+                      >
+                        <i className="fa-solid fa-trash-can"></i>
+                      </button>
+                      <Link
+                        to={"/compras/" + encargadoLegajo + "/" + proveedor.id}
+                      >
+                        <button className={styles.buttonCompras}>
+                          <i className="fa-solid fa-cart-shopping"></i>
+                        </button>
+                      </Link>
+                      <Link
+                        to={"/tecnicos/" + encargadoLegajo + "/" + proveedor.id}
+                      >
+                        <button href="" className={styles.buttonAgregarTecnico}>
+                          <i className="fa-solid fa-user-plus"></i>
+                        </button>
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </Fade>
         </div>
       </main>
     </div>
