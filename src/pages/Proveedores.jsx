@@ -47,7 +47,7 @@ function Proveedores() {
     navigate("/");
   };
 
-  function removeDuplicates(originalArray, prop) {
+  /*function removeDuplicates(originalArray, prop) {
     var newArray = [];
     var lookupObject = {};
 
@@ -59,9 +59,11 @@ function Proveedores() {
       newArray.push(lookupObject[i]);
     }
     return newArray;
-  }
+  }*/
 
-  var uniqueArray = removeDuplicates(proveedores, "id");
+  //var uniqueArray = removeDuplicates(proveedores, "id");
+
+  proveedores.sort((a, b) => b.calificacion - a.calificacion);
 
   const agregarProveedor = (e) => {
     e.preventDefault();
@@ -102,9 +104,9 @@ function Proveedores() {
   var results = [];
 
   if (!razonSocialBuscar) {
-    results = uniqueArray;
+    results = proveedores;
   } else if (razonSocialBuscar) {
-    results = uniqueArray.filter((elemento) => {
+    results = proveedores.filter((elemento) => {
       if (
         elemento.razonSocial
           .toString()
@@ -182,7 +184,7 @@ function Proveedores() {
                     <td>{proveedor.razonSocial}</td>
                     <td>{proveedor.direccion}</td>
                     <td>{proveedor.telefono}</td>
-                    <td>{proveedor.calificacion} /100</td>
+                    <td>{proveedor.calificacion} / 100</td>
                     <td>
                       <Link
                         to={

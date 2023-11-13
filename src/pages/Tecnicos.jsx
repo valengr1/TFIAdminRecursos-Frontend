@@ -102,6 +102,7 @@ function Tecnicos() {
             <div className={styles.div}>
               <h3 className={styles.h3DNI}>DNI</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="dni"
                 onChange={handleChange}
@@ -112,6 +113,7 @@ function Tecnicos() {
             <div className={styles.div}>
               <h3 className={styles.h3Nombre}>Nombre</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="nombre"
                 onChange={handleChange}
@@ -122,6 +124,7 @@ function Tecnicos() {
             <div className={styles.div}>
               <h3 className={styles.h3Apellido}>Apellido</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="apellido"
                 onChange={handleChange}
@@ -132,6 +135,7 @@ function Tecnicos() {
             <div className={styles.div}>
               <h3 className={styles.h3Servicio}>Servicio</h3>
               <input
+                autoComplete="off"
                 type="text"
                 name="servicio"
                 onChange={handleChange}

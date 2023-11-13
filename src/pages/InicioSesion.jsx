@@ -61,6 +61,7 @@ function InicioSesion() {
             </div>
             <h3 className={styles.h3_legajo}>Legajo</h3>
             <input
+              autoComplete="off"
               type="text"
               onChange={handleLegajoChange}
               name="legajo"
