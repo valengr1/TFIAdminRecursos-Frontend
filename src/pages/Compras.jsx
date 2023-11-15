@@ -72,6 +72,22 @@ function Compras() {
     });
   };
 
+  function removeDuplicates(originalArray, prop) {
+    var newArray = [];
+    var lookupObject = {};
+
+    for (var i in originalArray) {
+      lookupObject[originalArray[i][prop]] = originalArray[i];
+    }
+
+    for (i in lookupObject) {
+      newArray.push(lookupObject[i]);
+    }
+    return newArray;
+  }
+
+  var uniqueArray = removeDuplicates(compras, "id");
+
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
@@ -93,11 +109,10 @@ function Compras() {
         <div className={styles.form}>
           <div className={styles.busqueda}>
             <Fade duration={2000}>
-              <h2 className={styles.h2Proveedor}>Proveedor</h2>
-              <h3 className={styles.h3CUIT}>CUIT: {proveedor.cuit}</h3>
               <h3 className={styles.h3RazonSocial}>
                 Razón social: {proveedor.razonSocial}
               </h3>
+              <h3 className={styles.h3CUIT}>CUIT: {proveedor.cuit}</h3>
               <Link
                 to={
                   "/vencimientoDeGarantia/" +
@@ -126,7 +141,7 @@ function Compras() {
                 </tr>
               </thead>
               <tbody className={styles.tbody}>
-                {compras.map((compra) => (
+                {uniqueArray.map((compra) => (
                   <tr key={compra.id}>
                     <td>{compra.id}</td>
                     <td>
@@ -155,7 +170,9 @@ function Compras() {
         <div className={styles.form}>
           <div className={styles.busqueda}>
             <Fade duration={2000}>
-              <h2>Detalle de la compra de id: {idCompra}</h2>
+              <h2 className={styles.detalleIdCompra}>
+                Detalle de la compra de id: {idCompra}
+              </h2>
             </Fade>
           </div>
         </div>

@@ -20,7 +20,7 @@ function VencimientoGarantia() {
     telefono: 0,
   });
 
-  const [detalles, setDetalles] = useState([]);
+  const [equipamientos, setEquipamientos] = useState([]);
 
   const location = useLocation();
   const encargadoLegajo = location.pathname.split("/")[2];
@@ -49,13 +49,23 @@ function VencimientoGarantia() {
             idProveedor
         )
         .then((res) => {
-          setDetalles(res.data);
+          setEquipamientos(res.data);
         });
     };
     getEquipamientoPorVencerSuGarantiaEn30DiasOMenosByProveedor();
     getProveedor();
     getEncargado();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  //function ordenarPorFecha(originalArray) {
+  //return originalArray.sort(
+  //   (a, b) => new Date(a.fechas).getTime() > new Date(b.fechas).getTime()
+  // );
+  //}
+
+  //var equipamientoOrdenadoPorFecha = ordenarPorFecha(equipamientos);
   return (
     <div className={styles.principal}>
       <header className={styles.header}>
@@ -67,7 +77,7 @@ function VencimientoGarantia() {
           </Link>
 
           <h2 className={styles.header_titulo}>
-            Productos por perder su garantía
+            Productos que pierden su garantía en 30 días
           </h2>
           <div className={styles.header_encargadoCaja}>
             <i className="fa-regular fa-user"></i>
@@ -79,11 +89,10 @@ function VencimientoGarantia() {
         <div className={styles.form}>
           <div className={styles.busqueda}>
             <Fade duration={2000}>
-              <h2 className={styles.h2Proveedor}>Proveedor</h2>
-              <h3 className={styles.h3CUIT}>CUIT: {proveedor.cuit}</h3>
               <h3 className={styles.h3RazonSocial}>
                 Razón social: {proveedor.razonSocial}
               </h3>
+              <h3 className={styles.h3CUIT}>CUIT: {proveedor.cuit}</h3>
             </Fade>
           </div>
         </div>
@@ -99,12 +108,12 @@ function VencimientoGarantia() {
                 </tr>
               </thead>
               <tbody className={styles.tbody}>
-                {detalles.map((detalle) => (
-                  <tr key={detalle.id}>
-                    <td>{detalle.id}</td>
-                    <td>{detalle.equipamiento.descripcion}</td>
-                    <td>${detalle.equipamiento.costo}</td>
-                    <td>{detalle.equipamiento.garantia}</td>
+                {equipamientos.map((equipamiento) => (
+                  <tr key={equipamiento.id}>
+                    <td>{equipamiento.id}</td>
+                    <td>{equipamiento.descripcion}</td>
+                    <td>${equipamiento.costo}</td>
+                    <td>{equipamiento.garantia}</td>
                   </tr>
                 ))}
               </tbody>
