@@ -74,7 +74,7 @@ function Proveedores() {
   const eliminarProveedor = (id) => {
     Swal.fire({
       title: "Estas seguro?",
-      text: "Se eliminarán las compras y detalles de compra del proveedor",
+      text: "Se eliminarán los detalles de compra, los equipamientos y los técnicos además del proveedor.",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
