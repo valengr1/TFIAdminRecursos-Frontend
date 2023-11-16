@@ -19,14 +19,14 @@
   border: none;
   box-shadow: 0 .4rem .8rem #0005;
   border-radius: 0.8rem;
-  background: rgb(0, 52, 108);
+  background: rgb(15, 128, 159);
   color: #fff;
 }
 
 .buttonSalir:hover{
   scale: 1.02;
   background-color: #fff ;
-  color: rgb(0, 52, 108);
+  color: rgb(15, 128, 159);
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
 }
 
@@ -71,44 +71,48 @@
   gap: 40px;
 }
 
-.h2Proveedor{
-  font-size: 1.4em;
-  margin-left: 3vw;
-  font-weight: 100;
-}
-
 .h3CUIT{
-  font-size: 1.15em;
-  margin-left: 3vw;
-  font-weight: 100;
-
-}
-
-.h3RazonSocial{
   font-size: 1.25em;
   margin-left: 3vw;
   font-weight: 100;
 }
 
+.h3CUIT:hover{
+  cursor: pointer;
+  scale: 1.05;
+}
+
+.h3RazonSocial{
+  font-size: 1.35em;
+  margin-left: 3vw;
+  font-weight: 100;
+}
+
+.h3RazonSocial:hover{
+  cursor: pointer;
+  scale: 1.05;
+}
+
 .buttonVencimientoGarantias{
-  height: 1.5em;
   padding-right: 7px;
   padding-left: 7px;
-  border-radius: 10px;
   border: none;
   box-shadow: 0 .1rem .2rem rgb(7, 38, 70);
-  background-color: rgb(37, 49, 63);
-  background-color: rgb(0, 52, 108);
+  background-color: rgb(15, 128, 159);
   cursor: pointer;
   color: #fff;
   font-size: 1.1em;
   margin-left: 3em;
+  padding-bottom: 1px;
+  height: 1.9em;
+  border-radius: .5rem;
 }
+
 
 .buttonVencimientoGarantias:hover{
   padding-bottom: 2px;
   background: #fff;
-  color: rgb(37, 49, 63);
+  color: rgb(15, 128, 159);
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   font-weight: 600;
 }
@@ -116,7 +120,7 @@
 .divTabla{
   width: 95%;
   max-height: calc(89% - 1.6rem);
-  background-color: #fffb;
+  background-color: rgba(255, 255, 255,.5);
   margin: .8rem auto;
   border-radius: .6rem;
   overflow: auto;
@@ -160,10 +164,10 @@ tbody{
   margin-bottom: 5px;
   cursor: pointer;
   border: none;
-  background-color: rgb(0, 52, 108);  
+  background-color: rgb(15, 128, 159);  
   box-shadow: 0 .1rem .2rem rgb(7, 38, 70);
   color: #fff;
-  border-radius: 0.8rem;
+  border-radius: 0.6rem;
   font-size: .8em;
 }
 
@@ -171,7 +175,7 @@ tbody{
   scale: 1.06;
   box-shadow: inset 0 0 2px #fff, 0 0 5px #fff, 0 0 10px #fff;
   background-color: #fff;
-  color: rgb(0, 52, 108);
+  color: rgb(15, 128, 159);
   font-weight: 900;
 }
 
@@ -184,4 +188,11 @@ i{
   font-weight: 100;
   color: rgb(255, 255, 255);
   margin-right: 2vw;
+  font-size: 1.35em;
+}
+
+.detalleIdCompra:hover{
+  color: rgb(15, 128, 159);
+  cursor: pointer;
+  scale: 1.05;
 }

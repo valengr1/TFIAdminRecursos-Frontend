@@ -138,16 +138,15 @@ function Proveedores() {
             <Fade duration={2000}>
               <div className={styles.form_buttonBuscar}>
                 <i className="fa-solid fa-magnifying-glass"></i>
+                <input
+                  autoComplete="off"
+                  type="text"
+                  className={styles.form_input}
+                  name="razonSocialBuscar"
+                  onChange={handleChangeBusqueda}
+                  placeholder="Razón social"
+                />
               </div>
-
-              <input
-                autoComplete="off"
-                type="text"
-                className={styles.form_input}
-                name="razonSocialBuscar"
-                onChange={handleChangeBusqueda}
-                placeholder="Razón social"
-              />
             </Fade>
           </div>
           <div className={styles.botones}>
