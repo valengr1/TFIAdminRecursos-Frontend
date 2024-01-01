@@ -79,7 +79,6 @@
 
 .h3CUIT:hover{
   cursor: pointer;
-  scale: 1.05;
 }
 
 .h3RazonSocial{
@@ -90,7 +89,6 @@
 
 .h3RazonSocial:hover{
   cursor: pointer;
-  scale: 1.05;
 }
 
 .buttonVencimientoGarantias{

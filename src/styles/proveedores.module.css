@@ -47,8 +47,6 @@ body{
   font-weight: 600;
   color: #fff;
   cursor: pointer;
-  /*text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1);*/
-
 }
 
 .header_encargadoCaja{
@@ -57,7 +55,6 @@ body{
   justify-content: center;
   gap: 10px;
   font-size: 1.1em;
-  /*text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1);*/
   color: #fff;
   cursor: pointer;
 }

@@ -22,6 +22,8 @@ function Compras() {
     telefono: 0,
   });
 
+  const [total, setTotal] = useState(0);
+
   const [detallesCompra, setDetallesCompra] = useState([]);
 
   const [compras, setCompras] = useState([]);
@@ -55,6 +57,15 @@ function Compras() {
           setCompras(res.data);
         });
     };
+
+    const getTotal = () => {
+      axios
+        .get("http://localhost:8080/getTotalComprasDelProveedor/" + idProveedor)
+        .then((res) => {
+          setTotal(res.data);
+        });
+    };
+    getTotal();
     getCompras();
     getProveedor();
     getEncargado();
@@ -113,6 +124,7 @@ function Compras() {
                 Razón social: {proveedor.razonSocial}
               </h3>
               <h3 className={styles.h3CUIT}>CUIT: {proveedor.cuit}</h3>
+              <h2 className={styles.h3CUIT}>Total de las compras: ${total}</h2>
               <Link
                 to={
                   "/vencimientoDeGarantia/" +

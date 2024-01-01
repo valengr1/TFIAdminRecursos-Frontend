@@ -17,7 +17,7 @@ function AgregarProveedor() {
 
   const [proveedor, setProveedor] = useState({
     id: 0,
-    cuit: 0,
+    cuit: "",
     razonSocial: "",
     direccion: "",
     telefono: 0,
@@ -50,10 +50,14 @@ function AgregarProveedor() {
         },
       })
       .then((res) => {
-        toast.success(res.data);
-        setTimeout(() => {
-          navigate("/proveedores/" + encargado.legajo);
-        }, 2000);
+        if (res.data === "Proveedor agregado") {
+          toast.success(res.data);
+          setTimeout(() => {
+            navigate("/proveedores/" + encargado.legajo);
+          }, 2000);
+        } else {
+          toast.error("Cuit invalido");
+        }
       })
       .catch((err) => {
         console.log("algo salio mal: " + err);
